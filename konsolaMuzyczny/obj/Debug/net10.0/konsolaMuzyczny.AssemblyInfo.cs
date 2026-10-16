@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("konsolaMuzyczny")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09e4bc88df4d81f1325b8469556de205c48b3ba7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+233ba5ae0334e89b345fa8ebfff0c6bb46a967f1")]
 [assembly: System.Reflection.AssemblyProductAttribute("konsolaMuzyczny")]
 [assembly: System.Reflection.AssemblyTitleAttribute("konsolaMuzyczny")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
