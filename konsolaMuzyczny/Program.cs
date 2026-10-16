@@ -16,19 +16,30 @@ public struct Dane
     }
 }
 
+
 class Program
 {
-    static void Main(string[] args)
+    static string[] pobierzDane()
     {
         string sciezkaPliku = "../../../Data.txt";
-        
         string[] linie = File.ReadAllLines(sciezkaPliku);
         
-        List<Dane> listaAlbumow = new List<Dane>();
+        return linie;
 
+    }
+    
+    static void wyswietlDane(string[] linie)
+    {
         foreach (string linia in linie)
         {
             Console.WriteLine(linia);
         }
+    }
+    
+    
+    static void Main(string[] args)
+    {
+        string[] linie = pobierzDane();
+        wyswietlDane(linie);
     }
 }

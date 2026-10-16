@@ -12,3 +12,4 @@
 /home/bula/RiderProjects/konsolaMuzyczny/konsolaMuzyczny/obj/Debug/net10.0/konsolaMuzyczny.pdb
 /home/bula/RiderProjects/konsolaMuzyczny/konsolaMuzyczny/obj/Debug/net10.0/konsolaMuzyczny.genruntimeconfig.cache
 /home/bula/RiderProjects/konsolaMuzyczny/konsolaMuzyczny/obj/Debug/net10.0/ref/konsolaMuzyczny.dll
+/home/bula/RiderProjects/konsolaMuzyczny/konsolaMuzyczny/obj/Debug/net10.0/konsolaMuzyczny.sourcelink.json
