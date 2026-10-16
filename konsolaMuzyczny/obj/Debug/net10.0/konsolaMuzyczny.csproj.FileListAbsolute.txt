@@ -1,0 +1,14 @@
+/home/bula/RiderProjects/konsolaMuzyczny/konsolaMuzyczny/bin/Debug/net10.0/konsolaMuzyczny
+/home/bula/RiderProjects/konsolaMuzyczny/konsolaMuzyczny/bin/Debug/net10.0/konsolaMuzyczny.deps.json
+/home/bula/RiderProjects/konsolaMuzyczny/konsolaMuzyczny/bin/Debug/net10.0/konsolaMuzyczny.runtimeconfig.json
+/home/bula/RiderProjects/konsolaMuzyczny/konsolaMuzyczny/bin/Debug/net10.0/konsolaMuzyczny.dll
+/home/bula/RiderProjects/konsolaMuzyczny/konsolaMuzyczny/bin/Debug/net10.0/konsolaMuzyczny.pdb
+/home/bula/RiderProjects/konsolaMuzyczny/konsolaMuzyczny/obj/Debug/net10.0/konsolaMuzyczny.GeneratedMSBuildEditorConfig.editorconfig
+/home/bula/RiderProjects/konsolaMuzyczny/konsolaMuzyczny/obj/Debug/net10.0/konsolaMuzyczny.AssemblyInfoInputs.cache
+/home/bula/RiderProjects/konsolaMuzyczny/konsolaMuzyczny/obj/Debug/net10.0/konsolaMuzyczny.AssemblyInfo.cs
+/home/bula/RiderProjects/konsolaMuzyczny/konsolaMuzyczny/obj/Debug/net10.0/konsolaMuzyczny.csproj.CoreCompileInputs.cache
+/home/bula/RiderProjects/konsolaMuzyczny/konsolaMuzyczny/obj/Debug/net10.0/konsolaMuzyczny.dll
+/home/bula/RiderProjects/konsolaMuzyczny/konsolaMuzyczny/obj/Debug/net10.0/refint/konsolaMuzyczny.dll
+/home/bula/RiderProjects/konsolaMuzyczny/konsolaMuzyczny/obj/Debug/net10.0/konsolaMuzyczny.pdb
+/home/bula/RiderProjects/konsolaMuzyczny/konsolaMuzyczny/obj/Debug/net10.0/konsolaMuzyczny.genruntimeconfig.cache
+/home/bula/RiderProjects/konsolaMuzyczny/konsolaMuzyczny/obj/Debug/net10.0/ref/konsolaMuzyczny.dll
