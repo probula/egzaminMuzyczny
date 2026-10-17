@@ -2,14 +2,13 @@
 
 public struct Dane
 {
-    public string nazwaZespolu { set; get; }
-    public string tytulAlbumu { set; get;  }
-    public int liczbaUtworow { set; get; }
-    public int rokWydania { set; get; }
-    public long liczbaPobran { set; get; }
+    public string nazwaZespolu { get; set; }
+    public string tytulAlbumu { get; set; }
+    public int liczbaUtworow { get; set; }
+    public int rokWydania { get; set; }
+    public long liczbaPobran { get; set; }
 
-    public Dane(string nazwaZespolu, string tytulAlbumu,
-        int liczbaUtworow, int rokWydania, long liczbaPobran)
+    public Dane(string nazwaZespolu, string tytulAlbumu, int liczbaUtworow, int rokWydania, long liczbaPobran)
     {
         this.nazwaZespolu = nazwaZespolu;
         this.tytulAlbumu = tytulAlbumu;
@@ -17,68 +16,63 @@ public struct Dane
         this.rokWydania = rokWydania;
         this.liczbaPobran = liczbaPobran;
     }
+    
 }
+
 
 
 class Program
 {
-    static Dane[] pobierzDane()
+
+    public static List<Dane> odczytajDane()
     {
-        string sciezkaPliku = "../../../Data.txt";
-        string[] linie = File.ReadAllLines(sciezkaPliku);
-        
-        
+        var sciezka = "../../../Data.txt";
+        string[] tablicaLinijkaPliku = File.ReadAllLines(sciezka);
+        List<Dane> listaRekordow = new List<Dane>();
 
-        List<Dane> rekordy = new List<Dane>();
-        List<string> dane = new List<string>();
-
-        foreach (string line in linie)
+        for (int i = 0; i < tablicaLinijkaPliku.Length; i += 6) // 5 lini danych + 6 linia odstepu
         {
-            if (!string.IsNullOrWhiteSpace(line))
+            if (string.IsNullOrEmpty(tablicaLinijkaPliku[i]))
             {
-                dane.Add(line.Trim());
+                continue;
             }
+
+            if (i + 4 < tablicaLinijkaPliku.Length)
+            {
+                Dane dane = new Dane();
+                dane.nazwaZespolu = tablicaLinijkaPliku[i];
+                dane.tytulAlbumu = tablicaLinijkaPliku[i + 1];
+                dane.liczbaUtworow = int.Parse(tablicaLinijkaPliku[i + 2]);
+                dane.rokWydania = int.Parse(tablicaLinijkaPliku[i + 3]);
+                dane.liczbaPobran = int.Parse(tablicaLinijkaPliku[i + 4]);
+                
+                listaRekordow.Add(dane);
+            }
+            
         }
+        
+        return listaRekordow;
 
-        for (int i = 0; i+4 < dane.Count; i += 5)
-        {
-            string nazwaZespolu = dane[i];
-            string tytulAlbumu = dane[i + 1];
-            int liczbaUtworow = int.Parse(dane[i + 2]);
-            int rokWydania = int.Parse(dane[i + 3]);
-            long liczbaPobran = int.Parse(dane[i + 4]);
-   
-
-            Dane rekord = new Dane(
-                nazwaZespolu: nazwaZespolu,
-                tytulAlbumu: tytulAlbumu,
-                liczbaUtworow: liczbaUtworow,
-                rokWydania: rokWydania,
-                liczbaPobran: liczbaPobran
-            );
-            rekordy.Add(rekord);
-        }
-
-        return rekordy.ToArray();
 
     }
-    
-    static void wyswietlDane(Dane[] rekordy)
+
+    public static void wyswietlDane(List<Dane> lista)
     {
-        foreach (Dane rekord in rekordy)
+        foreach (var rekord in lista)
         {
-            Console.WriteLine(
-                $"{rekord.nazwaZespolu}\n {rekord.tytulAlbumu}\n " +
-                $"{rekord.liczbaUtworow}\n {rekord.rokWydania}\n " +
-                $"{rekord.liczbaPobran}"
-            );
+            Console.WriteLine(rekord.nazwaZespolu);
+            Console.WriteLine(rekord.tytulAlbumu);
+            Console.WriteLine(rekord.liczbaUtworow);
+            Console.WriteLine(rekord.rokWydania);
+            Console.WriteLine(rekord.liczbaPobran);
         }
     }
-    
     
     static void Main(string[] args)
     {
-        Dane[] rekordy = pobierzDane();
+        List<Dane> rekordy = odczytajDane();
+            
         wyswietlDane(rekordy);
+
     }
 }
